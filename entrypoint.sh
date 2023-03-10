@@ -34,4 +34,8 @@ else
     crane copy $SOURCE $DESTINATION
 fi
 
-python replicate.py
+ls
+
+ls /
+
+python /replicate.py
