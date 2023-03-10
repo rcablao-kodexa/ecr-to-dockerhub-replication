@@ -9,7 +9,7 @@ def run_command(command, env):
     result = subprocess.Popen(
         command,
         env=env,
-        shell=False)
+        shell=True)
     text = result.communicate()[0]
     if text is not None:
         print(text)
