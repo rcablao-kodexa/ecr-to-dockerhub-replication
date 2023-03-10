@@ -28,7 +28,7 @@ aws_secret_access_key = str(sys.argv[8])
 aws_region = str(sys.argv[9])
 
 # Read configuration
-with open(f"/go/releases.yml", 'r') as stream:
+with open(f"/github/workspace/releases.yml", 'r') as stream:
     config_file = yaml.load(stream, Loader=yaml.FullLoader)
 
 # # Login
