@@ -31,5 +31,7 @@ else
     echo "$dockerhub_image_prefix/$container_image_name:$container_image_version does not exist - starting replication..."
     SOURCE="$aws_container_registry/$container_image_name:$container_image_version"
     DESTINATION="$dockerhub_image_prefix/$container_image_name:$container_image_version"
-    crane copy $SOURCE $DESTINATION
+    # crane copy $SOURCE $DESTINATION
+    crane pull $SOURCE "$container_image_name.tar"
+    crane push "$container_image_name.tar" $DESTINATION
 fi
