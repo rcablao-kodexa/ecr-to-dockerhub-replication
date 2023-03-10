@@ -38,4 +38,4 @@ with open(f"/github/workspace/releases.yml", 'r') as stream:
 # Process
 for version in config_file["extensionPacks"]:
   print(f"Processing {version['version']} {version['url']}...")
-  run_command(f"./scripts/replicate.sh {dockerhub_user} {dockerhub_token} {dockerhub_image_prefix} {aws_container_registry} {container_image_name} {version['version']}", os.environ)
+  run_command(f"/scripts/replicate.sh {dockerhub_user} {dockerhub_token} {dockerhub_image_prefix} {aws_container_registry} {container_image_name} {version['version']}", os.environ)
