@@ -37,3 +37,7 @@ fi
 ls
 
 pwd
+
+echo $PATH
+
+which python
