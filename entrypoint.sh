@@ -33,3 +33,7 @@ else
     DESTINATION="$dockerhub_image_prefix/$container_image_name:$container_image_version"
     crane copy $SOURCE $DESTINATION
 fi
+
+ls
+
+pwd
