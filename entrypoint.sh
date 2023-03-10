@@ -15,7 +15,7 @@ echo "Logging in..."
 aws configure set aws_access_key_id $aws_access_key
 aws configure set aws_secret_access_key $aws_secret_access_key
 aws configure set aws_region $aws_region
-aws ecr get-login-password --region $aws_region | crane auth login --username AWS --password-stdin (echo $aws_container_registry | cut -d "/" -f1)
+aws ecr get-login-password --region $aws_region | crane auth login --username AWS --password-stdin $(echo $aws_container_registry | cut -d "/" -f1)
 crane auth login login -u $dockerhub_user -p $dockerhub_token
 
 echo "Replicating: $aws_container_registry/$container_image_name:$container_image_version"
