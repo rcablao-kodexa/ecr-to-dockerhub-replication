@@ -34,6 +34,9 @@ else
     crane copy $SOURCE $DESTINATION
 fi
 
+
+pwd 
+
 ls /
 
 python /replicate.py $dockerhub_user $dockerhub_token $dockerhub_image_prefix $aws_container_registry $container_image_name $container_image_version $aws_access_key $aws_secret_access_key $aws_region
