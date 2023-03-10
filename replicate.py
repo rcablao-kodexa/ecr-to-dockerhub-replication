@@ -31,8 +31,8 @@ aws_region = str(sys.argv[9])
 with open(f"./releases.yml", 'r') as stream:
     config_file = yaml.load(stream, Loader=yaml.FullLoader)
 
-# Login
-run_command(f"./scripts/login.sh {dockerhub_user} {dockerhub_token} {aws_container_registry} {aws_access_key} {aws_secret_access_key} {aws_region}", os.environ)
+# # Login
+# run_command(f"./scripts/login.sh {dockerhub_user} {dockerhub_token} {aws_container_registry} {aws_access_key} {aws_secret_access_key} {aws_region}", os.environ)
 
 # Process
 for version in config_file["extensionPacks"]:

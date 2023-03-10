@@ -34,10 +34,4 @@ else
     crane copy $SOURCE $DESTINATION
 fi
 
-ls
-
-pwd
-
-echo $PATH
-
-which python
+python replicate.py
