@@ -8,8 +8,12 @@ COPY scripts ./scripts
 
 COPY replicate.py  ./
 
+COPY entrypoint.sh  ./
+
 RUN chmod +x -R ./scripts
 
 RUN chmod +x replicate.py
 
-ENTRYPOINT ["py ./replicate.py"]
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]
