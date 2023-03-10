@@ -42,4 +42,7 @@ This action replicates container images from ECR repository to Dockerhub
         aws_container_registry: ''
         container_image_name: ''
         container_image_version: ''
+        aws_access_key: ''
+        aws_secret_access_key: ''
+        aws_region: ''
 ```

@@ -20,6 +20,15 @@ inputs:
   container_image_version:
     description: 'Container Image Version'
     required: true
+  aws_access_key:
+    description: 'AWS Access Key'
+    required: true
+  aws_secret_access_key:
+    description: 'AWS Secret Access Key'
+    required: true
+  aws_region:
+    description: 'AWS Region'
+    required: true
 outputs:
   app_version:
     description: 'App version'
@@ -33,3 +42,6 @@ runs:
     - ${{ inputs.aws_container_registry }}
     - ${{ inputs.container_image_name }}
     - ${{ inputs.container_image_version }}
+    - ${{ inputs.aws_access_key }}
+    - ${{ inputs.aws_secret_access_key }}
+    - ${{ inputs.aws_region }}
