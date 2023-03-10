@@ -16,4 +16,4 @@ RUN chmod +x /replicate.py
 
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["py /replicate.py"]
+ENTRYPOINT ["/entrypoint.sh"]
