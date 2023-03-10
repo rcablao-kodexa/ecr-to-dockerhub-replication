@@ -14,6 +14,7 @@ def run_command(command, env):
     if text is not None:
         print(text)
     if result.returncode != 0:
+        print(result)
         exit(1)
 
 # Setup variables
