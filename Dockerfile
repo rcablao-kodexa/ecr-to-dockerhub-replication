@@ -1,15 +1,11 @@
 FROM golang:alpine3.17
 
-RUN apk add curl jq
-
-RUN apk add --no-cache aws-cli
-
-RUN apk add docker
+RUN apk add curl jq docker py3-pip aws-cli --no-cache 
 
 RUN go install github.com/google/go-containerregistry/cmd/crane@latest
 
-COPY entrypoint.sh /entrypoint.sh
+COPY scripts .
 
-RUN chmod +x /entrypoint.sh
+RUN chmod +x -R scripts
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["python replicate.py"]
