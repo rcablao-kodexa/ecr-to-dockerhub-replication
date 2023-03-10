@@ -4,15 +4,15 @@ FROM golang:alpine3.17
 
 # RUN go install github.com/google/go-containerregistry/cmd/crane@latest
 
-COPY scripts ./scripts
+COPY scripts /scripts
 
-COPY replicate.py  ./
+COPY replicate.py  /
 
-COPY entrypoint.sh  .
+COPY entrypoint.sh  /
 
-RUN chmod +x -R ./scripts
+RUN chmod +x -R /scripts
 
-RUN chmod +x replicate.py
+RUN chmod +x /replicate.py
 
 RUN chmod +x entrypoint.sh
 
