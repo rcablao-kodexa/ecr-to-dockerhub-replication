@@ -12,4 +12,4 @@ RUN chmod +x -R ./scripts
 
 RUN chmod +x replicate.py
 
-ENTRYPOINT ["python replicate.py"]
+ENTRYPOINT ["python3 replicate.py"]
