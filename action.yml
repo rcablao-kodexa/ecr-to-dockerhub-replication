@@ -8,6 +8,12 @@ inputs:
   dockerhub_token:
     description: 'Dockerhub Token'
     required: true
+  dockerhub_image_prefix:
+    description: 'Dockerhub Image Prefix'
+    required: true
+  aws_container_registry:
+    description: 'AWS Container Registry'
+    required: true
   container_image_name:
     description: 'Container Image Name'
     required: true
@@ -23,5 +29,7 @@ runs:
   args:
     - ${{ inputs.dockerhub_user }} 
     - ${{ inputs.dockerhub_token }}
+    - ${{ inputs.dockerhub_image_prefix }}
+    - ${{ inputs.aws_container_registry }}
     - ${{ inputs.container_image_name }}
     - ${{ inputs.container_image_version }}

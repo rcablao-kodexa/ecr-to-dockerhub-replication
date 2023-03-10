@@ -12,6 +12,15 @@ This action replicates container images from ECR repository to Dockerhub
 
 **Required** 
 
+### `dockerhub_image_prefix`
+
+**Required** 
+
+
+### `aws_container_registry`
+
+**Required** 
+
 ### `container_image_name`
 
 **Required** 
@@ -29,6 +38,8 @@ This action replicates container images from ECR repository to Dockerhub
       with:
         dockerhub_user: ''
         dockerhub_token: ''
+        dockerhub_image_prefix: ''
+        aws_container_registry: ''
         container_image_name: ''
         container_image_version: ''
 ```
