@@ -1,0 +1,27 @@
+name: 'ECR to DockerHub Replication'
+description: 'ECR to DockerHub Replication'
+author: 'Romar Cablao'
+inputs:
+  dockerhub_user:
+    description: 'Dockerhub User'
+    required: true
+  dockerhub_token:
+    description: 'Dockerhub Token'
+    required: true
+  container_image_name:
+    description: 'Container Image Name'
+    required: true
+  container_image_version:
+    description: 'Container Image Version'
+    required: true
+outputs:
+  app_version:
+    description: 'App version'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.dockerhub_user }} 
+    - ${{ inputs.dockerhub_token }}
+    - ${{ inputs.container_image_name }}
+    - ${{ inputs.container_image_version }}
